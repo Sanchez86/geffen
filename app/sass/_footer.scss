@@ -1,0 +1,109 @@
+/*footer*/
+.footer{
+	background-image: url(../img/backgrounds/footer_bg.jpg);
+	background-repeat: repeat;
+	padding-top: 56px;
+    padding-bottom: 46px;
+    a{
+    	font-size: 17.6px;
+    	color: #4386ac;
+	    padding-right: 15px;
+    	padding-left: 15px;
+    	transition:color 0.5s;
+    }
+    a:hover{
+    	color:#fff;
+    }
+    li{
+    	display: inline-block;
+    }
+    li:after{
+    	content: " | ";
+    	color: #4386ac;
+    }
+    li:last-child:after{
+    	display: none;
+    	
+    }
+    li:last-child{
+    	a{
+    		padding-right: 0px;
+    		padding-left: 0px;
+    	}
+    }
+	.iso{
+		background-image: url(../img/icons/footer_icon1.png);
+		background-repeat: no-repeat;
+		background-position: left center;
+		color: #ffffff;
+		font-size: 24px;
+		font-family: 'FBADRENALIN-REGULAR';
+	    padding-top: 15px;
+	    padding-bottom: 15px;
+	    padding-left: 79px;
+	    margin-top: 13px;
+        display: table-cell;
+        vertical-align: top;
+	    transition:background 0.5s;
+	}
+	.iso:hover{
+		background-image: url(../img/icons/footer_icon1_active.png);
+	}
+	.for_footer_logo{
+		text-align: left;
+	}
+	.youtube{
+		background-image: url(../img/icons/footer_icon0.png);
+        width: 68px;
+	    height: 48px;
+	    display: table-cell;
+	    vertical-align: top;
+	    background-position: left center;
+	    transition:background 0.5s;	
+	}
+	.youtube:hover{
+		background-image: url(../img/icons/footer_icon0_active.png);	
+	}
+
+	.footer_soc{
+		display: table;
+    	float: right;
+    	margin-top: 12px;
+	}
+}
+@media only screen and (max-width: 1199px){
+	.footer a{
+		line-height: 26px;
+	}
+}
+@media only screen and (max-width: 767px){
+	.footer_ul{
+	    margin-bottom: 20px;
+	}
+	.footer .for_footer_logo {
+	    text-align: center;
+	}
+}
+@media only screen and (max-width: 767px){
+	.footer{
+		text-align: center;
+	    padding-top: 40px;
+    	padding-bottom: 40px;
+	}
+	.footer_logo{
+		margin-bottom: 22px;
+	}
+}
+@media only screen and (max-width: 550px){
+	.footer li {
+	    display: block;
+	}
+	.footer li:after{
+		display: none;
+	}
+	.footer a{
+	    line-height: 21px;	
+	}
+}
+
+/*end footer*/

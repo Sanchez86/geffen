@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>INVcenter - Education video</title>
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+<style>
+.vid_container ul.btns{
+	text-align: center;
+}
+.vid_container ul.btns li{
+	display: inline-block;
+    vertical-align: top;
+	float: none!important;
+}
+.tmb{
+position:relative;
+}
+.tmb:after{
+    content: "";
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/play.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+</style>
+</head>
+<body>
+<script src="../js/libs.min.js"></script>
+<div id='players'>
+	<div id='mfp_player'></div>
+	<div id='vid_player_container'></div>
+	<div id='ebk_player'></div>
+	<div id='cal'></div>
+</div>
+<div id='mte_course'></div>
+<script src='//www.mte-media.com/admin2/js/mte.js'></script>
+	<script>
+ put_course({target_id:'mte_course', ref:'f44f8a9',settings: 'Default', language:'en', product:'prer'})
+</script>
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>INVcenter - Market Video</title>
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link rel="stylesheet" href="../css/libs.min.css" />
+	<link rel="stylesheet" href="../css/main.css" />
+	
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes' >
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+		
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	
+	<link rel="stylesheet" href="//mte-media.com/admin2/js/fancy/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic">
+
+	<script type="text/javascript" src="//mte-media.com/admin2/js/fancy/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+	<title>MTE Widgets</title>
+        
+<script>
+
+        	
+	function detectmob(){ 
+		 if( navigator.userAgent.match(/Android/i)
+		 || navigator.userAgent.match(/webOS/i)
+		 || navigator.userAgent.match(/iPhone/i)
+		 || navigator.userAgent.match(/iPad/i)
+		 || navigator.userAgent.match(/iPod/i)
+		 || navigator.userAgent.match(/BlackBerry/i)
+		 || navigator.userAgent.match(/Windows Phone/i)
+		 ){return true;}else{return false;}
+	}
+	
+	var isMobile = detectmob();
+	
+	showDemoMsg = function(){
+
+	var msg , div;
+	var usersPath = "//mte-media.com/users/invcenter/";
+	var btn = "REGISTER NOW";
+	var title = "PREMIUM CONTENT";
+	var body = "REGISTER NOW";
+
+	$.event.trigger({type: "LOCKED_PRESSED", message: "",time: new Date()});
+	if($("#reg_message").length>0){
+		//use this content
+		msg = $("#reg_message").html();
+		if(msg.length==0){return;}
+		div= "#reg_message";
+	}else{
+		//create default message
+		msg = "<div id='reg_msg2'  >";
+		msg += "<img src='" + usersPath + "/logo.png' />";
+		msg += "<br><h2>" + title+"</h2>";
+		msg += "<h4>"+body+"</h4>";
+		msg += "<div class='reg_btn' style='line-height: 14pt' >"+btn+"</div>";
+		msg += "</div>";
+		div = "#reg_msg2";
+	}
+	
+	var url = "" ;	
+	
+	$.fancybox.open({content: msg, padding:3, type:"inline", beforeShow:function(){$("#reg_msg2 .reg_btn").click(function(){window.open(url  , '_top');}) }});
+}
+			
+			$(function(){
+				
+				if(isMobile){
+					$('.widgetframe').addClass('mobile');
+				}else{}
+				
+			})
+			
+        </script>
+        <style>
+		item.layout.vertical.style-scope.mte-video-briefings{
+				padding: 0 !important;
+				border: 0;
+				border-radius: 0;
+			}
+			.itemcontainer.style-scope.mte-video-briefings{
+				width: 226px;
+				margin-right: 15px;
+				margin-bottom:41px;
+			}
+			
+			.mte-video-briefings-0 .primary.mte-video-briefings{
+				text-align: center;
+				color:#d2d1d1;
+				font-size:16px;
+				margin-top: 21px;
+				margin-bottom: 10px;
+			}
+			.mte-video-briefings-0 .pad.mte-video-briefings{
+			    background-color: #1a1b1e;
+				padding-bottom: 42px;
+			}
+			.mte-video-briefings-0 .newsimage.mte-video-briefings .wrapper.mte-video-briefings{
+				background-image: url('../img/play.png');
+				transition:background 0.5s;
+			}
+			.mte-video-briefings-0 .newsimage.mte-video-briefings .wrapper.mte-video-briefings:hover{
+				background-size:55px;
+				transition:background 0.5s;
+			}
+			.pad .layout.horizontal.style-scope.mte-video-briefings{
+				display: block;
+				text-align: center;
+			}
+			.mte-video-briefings-0 .postedat.mte-video-briefings{
+				color:#d2d1d1;
+				font-size: 13px;
+				margin-bottom: 17px;
+			}
+			.mte-video-briefings-0 .tradebutton.mte-video-briefings{
+				text-transform: uppercase;
+				color: #0d0d0d !important;
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eacc6b+1,a17b3b+100 */
+background: #eacc6b !important; /* Old browsers */
+background: -moz-linear-gradient(top, #eacc6b 1%, #a17b3b 100%) !important; /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #eacc6b 1%,#a17b3b 100%) !important; /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #eacc6b 1%,#a17b3b 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eacc6b', endColorstr='#a17b3b',GradientType=0 ) !important; /* IE6-9 */
+			}
+			.tradebutton.style-scope.mte-video-briefings.x-scope.paper-button-0{
+				width: 126px !important;
+				font-size: 15px;
+			}
+			#maindiv{
+			    max-width: 88vw;
+				width:100%;
+				margin: 0 auto;
+			}
+			
+			.mte-video-briefings-0 .item.mte-video-briefings{
+				padding:0;
+				border:0;
+				bolder-radius:0;
+			}
+			
+			
+			
+			
+            body{margin:0;padding: 0; min-height:300px;}
+           
+            .briefingslogo{ height: 40px;width:auto; }
+            
+            .widgetframe{
+            	background: #F2F2F2;
+            	position:relative;
+                border:5px solid rgba(0, 0, 0, 0.3);
+                width: 100% ;
+                float: left; 
+                margin-right: ;
+                margin-left: ;
+                border-radius:3px;
+                margin-bottom: 20px;
+                margin-top:20px;
+                overflow: auto;
+            }
+            
+            .mobile{
+            	width: 100vh !important; /*margin-left: 2% !important; margin-right: 2% !important;*/
+            	/*border: 3px solid red rgba(0, 0, 0, 0.3) !important;*/
+            	border: 0 !important;
+            }
+                        
+            .widgettitle{
+                font-family: 'Roboto';
+                color:#9B9B9B;
+                padding-top:2px;
+                padding-bottom:3px;
+                padding-right: 2px;
+                padding-left:2px;
+                font-size:16pt;
+                background:rgba(0,0,0,0.2);
+                /*box-sizing: border-box;*/
+            }
+            
+            .widgetinfo{
+            	height: 50px;
+                font-family: 'Roboto';
+                color:#9B9B9B;
+                padding-top:2px;
+                padding-bottom:10px;
+                padding-right: 2px;
+                padding-left:2px;
+                font-size:10pt;
+               /* background:rgba(0, 0, 0, 0.3);*/
+                background: #F2F2F2                /*box-sizing: border-box;*/
+            }
+            
+            .tradebutton{width: 80px !important ;background: #7c6625 !important; color: #ffffff !important}
+			
+						
+			
+			mte-news-charts-landscape{max-width:1200px !important}
+			
+			
+	#reg_msg{display:none; padding:20px; text-align:center; z-index: 1005}
+	#reg_msg2{padding:2vw; text-align:center; background:white}
+	#reg_msg2 .reg_btn{margin: 0 auto; cursor:pointer;width: 250px; height: 25px; background: green; color:white; padding:15px;border: 1px solid grey}
+	#reg_msg2 .reg_btn:hover{background: black ; color:white}
+	#reg_msg2 img{width: 10vw;
+	 -webkit-filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.7));
+	    filter: url(#drop-shadow);
+	    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+	    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+	    }
+	#reg_msg2:hover{ color: #333}
+
+        </style>
+    
+
+<style is="custom-style">
+:root {
+           	
+/* ----------------------- mte-video-briefings CSS style ------------------ */
+--mte-video-briefings:{
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+font-family: 'Roboto';
+line-height: 1em;
+};
+--mte-video-briefings-landscape-width:340px;
+--mte-video-briefings-item-margin:1px 1px 1px 1px;
+--mte-video-briefings-item-padding:1em;
+--mte-video-briefings-item-border-radius:8px;
+--mte-video-briefings-item-border:1px solid #808080;
+--mte-video-briefings-item-background:#f2f2f2;
+--mte-video-briefings-item-hover:#eeeeee;
+--mte-video-briefings-title-color:#676767;
+--mte-video-briefings-title-font-size:0.8em;
+--mte-video-briefings-title-font-weight:550;
+--mte-video-briefings-title-font-family:'Roboto';
+--mte-video-briefings-postedat-font-size:0.7em;
+--mte-video-briefings-postedat-font-weight:300;
+--mte-video-briefings-postedat-font-family:'Roboto';
+--mte-video-briefings-postedat-color:#7d7d7d;
+/* --------------- END mte-video-briefings  ------------------------------- */
+                    
+ 
+ 
+ 
+}
+</style>
+
+</head>
+<body>
+<div class='no_frame' dir='ltr'  ><mte-video-briefings data-assets='$csi' limit='11' clientId='f44f8a9' data-assets='$csi' lang='en' height='100vh' detailurl='http://fpp.testsaitov.com/list/2018/invcenter/iframes/market_article.html' tradelink='http://fpp.testsaitov.com/list/2018/invcenter/for_market_video.html' ></mte-video-briefings></div><!-- slm scripts -->
+<script src='//mte-media.com/slmloaders/videobriefingsloader.js' ></script><script src='//mte-media.com/slmloaders/loadwebcomponents.js'data-widgets='["mte-video-briefings"]' id='mtewidgetloader'  ></script>
+
+
+</body>
+</html>

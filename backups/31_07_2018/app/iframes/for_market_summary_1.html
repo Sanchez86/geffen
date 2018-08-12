@@ -1,0 +1,254 @@
+<!DOCTYPE html >
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes' >
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+		
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	
+	<link rel="stylesheet" href="//mte-media.com/admin2/js/fancy/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic">
+
+	<script type="text/javascript" src="//mte-media.com/admin2/js/fancy/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+	<title>MTE Widgets</title>
+        
+<script>
+
+        	
+	function detectmob(){ 
+		 if( navigator.userAgent.match(/Android/i)
+		 || navigator.userAgent.match(/webOS/i)
+		 || navigator.userAgent.match(/iPhone/i)
+		 || navigator.userAgent.match(/iPad/i)
+		 || navigator.userAgent.match(/iPod/i)
+		 || navigator.userAgent.match(/BlackBerry/i)
+		 || navigator.userAgent.match(/Windows Phone/i)
+		 ){return true;}else{return false;}
+	}
+	
+	var isMobile = detectmob();
+	
+	showDemoMsg = function(){
+
+	var msg , div;
+	var usersPath = "//mte-media.com/users/invcenter/";
+	var btn = "REGISTER NOW";
+	var title = "PREMIUM CONTENT";
+	var body = "REGISTER NOW";
+
+	$.event.trigger({type: "LOCKED_PRESSED", message: "",time: new Date()});
+	if($("#reg_message").length>0){
+		//use this content
+		msg = $("#reg_message").html();
+		if(msg.length==0){return;}
+		div= "#reg_message";
+	}else{
+		//create default message
+		msg = "<div id='reg_msg2'  >";
+		msg += "<img src='" + usersPath + "/logo.png' />";
+		msg += "<br><h2>" + title+"</h2>";
+		msg += "<h4>"+body+"</h4>";
+		msg += "<div class='reg_btn' style='line-height: 14pt' >"+btn+"</div>";
+		msg += "</div>";
+		div = "#reg_msg2";
+	}
+	
+	var url = "" ;	
+	
+	$.fancybox.open({content: msg, padding:3, type:"inline", beforeShow:function(){$("#reg_msg2 .reg_btn").click(function(){window.open(url  , '_top');}) }});
+}
+			
+			$(function(){
+				
+				if(isMobile){
+					$('.widgetframe').addClass('mobile');
+				}else{}
+				
+			})
+			
+        </script>
+        <style>
+            body{margin:0;padding: 0; min-height:300px;}
+           
+            .briefingslogo{ height: 40px;width:auto; }
+            
+            .widgetframe{
+            	background: #F2F2F2;
+            	position:relative;
+                border:5px solid rgba(0, 0, 0, 0.3);
+                width: 100% ;
+                float: left; 
+                margin-right: ;
+                margin-left: ;
+                border-radius:3px;
+                margin-bottom: 20px;
+                margin-top:20px;
+                overflow: auto;
+            }
+            
+            .mobile{
+            	width: 100vh !important; /*margin-left: 2% !important; margin-right: 2% !important;*/
+            	/*border: 3px solid red rgba(0, 0, 0, 0.3) !important;*/
+            	border: 0 !important;
+            }
+                        
+            .widgettitle{
+                font-family: 'Roboto';
+                color:#9B9B9B;
+                padding-top:2px;
+                padding-bottom:3px;
+                padding-right: 2px;
+                padding-left:2px;
+                font-size:16pt;
+                background:rgba(0,0,0,0.2);
+                /*box-sizing: border-box;*/
+            }
+            
+            .widgetinfo{
+            	height: 50px;
+                font-family: 'Roboto';
+                color:#9B9B9B;
+                padding-top:2px;
+                padding-bottom:10px;
+                padding-right: 2px;
+                padding-left:2px;
+                font-size:10pt;
+               /* background:rgba(0, 0, 0, 0.3);*/
+                background: #F2F2F2                /*box-sizing: border-box;*/
+            }
+            
+            .tradebutton{width: 80px !important ;background: #7c6625 !important; color: #ffffff !important}
+			
+						
+			
+			mte-news-charts-landscape{max-width:1200px !important}
+			
+			
+	#reg_msg{display:none; padding:20px; text-align:center; z-index: 1005}
+	#reg_msg2{padding:2vw; text-align:center; background:white}
+	#reg_msg2 .reg_btn{margin: 0 auto; cursor:pointer;width: 250px; height: 25px; background: green; color:white; padding:15px;border: 1px solid grey}
+	#reg_msg2 .reg_btn:hover{background: black ; color:white}
+	#reg_msg2 img{width: 10vw;
+	 -webkit-filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.7));
+	    filter: url(#drop-shadow);
+	    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+	    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+	    }
+	#reg_msg2:hover{ color: #333}
+
+        </style>
+    
+
+<style is="custom-style">
+:root {
+              	            	
+/* ------------- mte notifications (sgnl) CSS style ---------------------------------------------------------*/
+--mte-notifications:{
+font-size: 1em; 
+font-weight: 300;
+color:#555;
+font-family: 'Roboto';
+};
+--mte-notification-toolbar-color:  #ffffff;
+--mte-notification-toolbar-background: #383838;
+--mte-notification-toolbar-height:56px;
+--mte-notification-item-hover:#eeeeee;
+--mte-notifications-postedat-font-size:13px;
+--mte-notifications-postedat-font-weight:300;    
+--mte-notifications-postedat-font-family:'Roboto'; 
+--mte-notifications-postedat-color:#7d7d7d;
+--notifications-disclaimer:{
+padding:20px;
+color:rgba(1,1,1,0.6);
+background:#EEE;
+};
+--notification-asset:{
+font-size: 1.0em;
+font-weight:400;          
+font-family:'Roboto';
+/*color:rgba(0,0,0,0.5) ; */
+color: #7d7d7d;      
+padding:0.2em;
+};
+--notification-rate:{
+font-family:'Roboto';
+font-size: 0.8em;
+font-weight:300;  
+/*color:rgba(0,0,0,0.5) ; */
+color: #7d7d7d;        
+padding:0.2em;
+};
+--mte-notification-item:{
+/*color: red !important;*/
+background: #f2f2f2;
+overflow: hidden;        
+padding: 5px;
+line-height: 1.1em;
+list-style: none; 
+text-align: start;
+border-bottom: 1px dotted #808080; 
+};
+--notification-trade-button-theme:{
+width:35px;
+height:25px;
+background-color:#7c6625 ; 
+color: #ffffff ;          
+text-align:center;
+font-size: 0.8em;
+};
+--notification-indicators:{
+font-size: 0.8em;
+font-weight:300;          
+font-family:'Roboto';
+color: #7d7d7d ;
+};
+--notification-expires-caption:{
+font-family:'Roboto';
+font-size: 0.8em;
+font-weight:300;   
+color: #7d7d7d ;
+padding:0.2em;
+};
+--notification-expires:{
+font-family:'Roboto';
+font-size: 0.9em;
+font-weight:400; 
+color: #7d7d7d ;
+padding:0.2em;
+};
+--notification-indicators-text:{
+font-family:'Roboto';
+font-size: 0.8em;
+font-weight:400;  
+color: #7d7d7d;
+};
+--notification-takeprofit-caption:{
+font-family:'Roboto';           
+font-weight:300;
+color:#7d7d7d;   
+};
+--notification-stoploss-caption:{     
+font-family:'Roboto';           
+font-weight:300;
+color:#7d7d7d;            
+};
+--notification-takeprofit:{     
+font-family:'Roboto';           
+font-weight:300;
+color:#7d7d7d;            
+};
+--notification-sl:{     
+font-family:'Roboto';           
+font-weight:300;
+color:#7d7d7d;            
+};
+                    
+ 
+ 
+ 
+}
+</style>
+<div class='no_frame' dir='ltr'  ><div class='sgnl_container' style='position:relative' ><mte-notifications demoIndex='2'  height='100vh' clientId='f44f8a9' lang='en' data-assets='$csi' data-mode='forex' tradelink='' notificationtitle='' ></mte-notifications></div></div><!-- slm scripts -->
+<script src='//mte-media.com/slmloaders/mtenotificationloader.js' ></script><script src='//mte-media.com/slmloaders/loadwebcomponents.js'data-widgets='["mte-notifications"]' id='mtewidgetloader'  ></script>

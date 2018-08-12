@@ -1,0 +1,103 @@
+/*footer*/
+.footer{
+	background-image: url(../img/backgrounds/footer_bg.jpg);
+	padding-top: 56px;
+    padding-bottom: 46px;
+}
+
+.footer_punkt{
+	width: 100%;
+    max-width: 300px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 30px;
+	span{
+		color: #ffffff;
+		font-size: 24px;
+		line-height: 24px;
+		background-image: url(../img/backgrounds/footer_line.png);
+		background-repeat: no-repeat;
+		background-position: bottom right;
+	    display: block;
+        padding-bottom: 6px;
+    	margin-bottom: 8px;
+	}
+	a{
+		color: #4386ac;
+		font-size: 18px;
+		line-height: 25px;
+		transition:color 0.5s;
+	}
+	a:hover{
+		color:#fff;
+	}
+}
+.footer_icons{
+	width:100%;
+	max-width: 276px;
+	ul{
+		position: relative;
+		margin-bottom: 40px
+	}
+	li{
+		display: inline-block;
+		span{
+			color: #ffffff;
+			font-size: 24px;
+			line-height: 24px;
+		}
+	}
+	p{
+		color: #ffffff;
+		font-size: 24px;
+		line-height: 24px;
+		text-align: center;
+		font-family: 'EXO2.0-REGULAR_0';
+	}
+	.footer_icons_text{
+		position: absolute;
+	    top: 10px;
+    	right: -130px;
+
+	}
+}
+.footer_icon{
+	width: 45px;
+	height: 45px;
+	display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition:background 0.5s;
+    margin-right: 3px;
+}
+.f_icon1{
+	background-image: url(../img/icons/footer_icon1.png);
+}
+.f_icon2{
+	background-image: url(../img/icons/footer_icon2.png);
+}
+.f_icon3{
+	background-image: url(../img/icons/footer_icon3.png);
+}
+.f_icon4{
+	background-image: url(../img/icons/footer_icon4.png);
+}
+.f_icon5{
+	background-image: url(../img/icons/footer_icon5.png);
+}
+.f_icon1:hover{
+	background-image: url(../img/icons/footer_icon1_active.png);
+}
+.f_icon2:hover{
+	background-image: url(../img/icons/footer_icon2_active.png);
+}
+.f_icon3:hover{
+	background-image: url(../img/icons/footer_icon3_active.png);
+}
+.f_icon4:hover{
+	background-image: url(../img/icons/footer_icon4_active.png);
+}
+.f_icon5:hover{
+	background-image: url(../img/icons/footer_icon5_active.png);
+}
+/*end footer*/
